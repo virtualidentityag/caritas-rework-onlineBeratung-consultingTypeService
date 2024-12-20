@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/CaritasDeutschland/caritas-onlineBeratung-consultingTypeService/compare/v1.4.0...v1.4.1) (2024-12-20)
+
+
+### Bug Fixes
+
+* CARITAS-243 ([6632616](https://github.com/CaritasDeutschland/caritas-onlineBeratung-consultingTypeService/commit/6632616666ea22bff0eecbfa977b42aa7c36139c))
+* CARITAS-243 ([2009eb3](https://github.com/CaritasDeutschland/caritas-onlineBeratung-consultingTypeService/commit/2009eb3831d303d31b7e9feb3bdaeb32208402de))
+* CARITAS-243 - remove initializeFeedbackChat and isPeerChat ([7bb0df4](https://github.com/CaritasDeutschland/caritas-onlineBeratung-consultingTypeService/commit/7bb0df4c9384f6b3d36aae2ef55e7692a9300567))
+* CARITAS-243 - remove initializeFeedbackChat and isPeerChat from ConsultingTypeDTO ([800c415](https://github.com/CaritasDeutschland/caritas-onlineBeratung-consultingTypeService/commit/800c41534c42f7bfbe5dce458eda2308e87743ed))
+* CARITAS-243 - remove initializeFeedbackChat and isPeerChat from ExtendedConsultingTypeResponseDTO ([5630b1b](https://github.com/CaritasDeutschland/caritas-onlineBeratung-consultingTypeService/commit/5630b1bdffabf497286195016dd02675524552c8))
+
 ## 1.4.0 (2024-06-18)
 
 
