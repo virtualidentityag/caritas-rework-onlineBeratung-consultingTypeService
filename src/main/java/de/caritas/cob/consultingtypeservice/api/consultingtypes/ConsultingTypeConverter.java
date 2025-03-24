@@ -13,9 +13,7 @@ import de.caritas.cob.consultingtypeservice.api.model.ConsultingTypeEntity;
 import de.caritas.cob.consultingtypeservice.api.model.ConsultingTypePatchDTO;
 import de.caritas.cob.consultingtypeservice.api.model.RequiredComponentsDTO;
 import de.caritas.cob.consultingtypeservice.api.model.RolesDTO;
-import de.caritas.cob.consultingtypeservice.api.model.WelcomeScreenDTO;
 import de.caritas.cob.consultingtypeservice.schemas.model.Age;
-import de.caritas.cob.consultingtypeservice.schemas.model.Anonymous;
 import de.caritas.cob.consultingtypeservice.schemas.model.ConsultingType;
 import de.caritas.cob.consultingtypeservice.schemas.model.FurtherInformation;
 import de.caritas.cob.consultingtypeservice.schemas.model.GroupChat;
@@ -32,7 +30,6 @@ import de.caritas.cob.consultingtypeservice.schemas.model.State;
 import de.caritas.cob.consultingtypeservice.schemas.model.TeamSessions;
 import de.caritas.cob.consultingtypeservice.schemas.model.Urls;
 import de.caritas.cob.consultingtypeservice.schemas.model.WelcomeMessage;
-import de.caritas.cob.consultingtypeservice.schemas.model.WelcomeScreen;
 import de.caritas.cob.consultingtypeservice.schemas.model.WhiteSpot;
 import java.util.ArrayList;
 import java.util.List;
@@ -85,9 +82,7 @@ public class ConsultingTypeConverter {
         .withShowAskerProfile(consultingTypeDTO.getShowAskerProfile())
         .withIsVideoCallAllowed(consultingTypeDTO.getIsVideoCallAllowed())
         .withIsSubsequentRegistrationAllowed(consultingTypeDTO.getIsSubsequentRegistrationAllowed())
-        .withIsAnonymousConversationAllowed(consultingTypeDTO.getIsAnonymousConversationAllowed())
-        .withRequiredComponents(convert(consultingTypeDTO.getRequiredComponents()))
-        .withWelcomeScreen(convert(consultingTypeDTO.getWelcomeScreen()));
+        .withRequiredComponents(convert(consultingTypeDTO.getRequiredComponents()));
   }
 
   public ConsultingType convert(
@@ -98,16 +93,6 @@ public class ConsultingTypeConverter {
         .withLanguageFormal(consultingTypeDTO.getLanguageFormal())
         .withNotifications(convert(consultingTypeDTO.getNotifications()))
         .withIsVideoCallAllowed(consultingTypeDTO.getIsVideoCallAllowed());
-  }
-
-  private WelcomeScreen convert(WelcomeScreenDTO welcomeScreen) {
-    if (welcomeScreen == null) {
-      return null;
-    }
-    return new WelcomeScreen()
-        .withAnonymous(
-            new Anonymous(
-                welcomeScreen.getAnonymous().getTitle(), welcomeScreen.getAnonymous().getText()));
   }
 
   private Urls convert(BasicConsultingTypeResponseDTOUrls urls) {

@@ -12,7 +12,6 @@
   "showAskerProfile": true,
   "isVideoCallAllowed": true,
   "isSubsequentRegistrationAllowed": true,
-  "isAnonymousConversationAllowed": true,
   "sessionDataInitializing": {
     "addictiveDrugs": true,
     "age": true,

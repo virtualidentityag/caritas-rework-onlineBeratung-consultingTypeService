@@ -29,7 +29,6 @@ public class FullConsultingTypeMapper extends ConsultingTypeMapper {
         .welcomeMessage(mapWelcomeMessage(consultingType.getWelcomeMessage()))
         .sendFurtherStepsMessage(consultingType.getSendFurtherStepsMessage())
         .isSubsequentRegistrationAllowed(consultingType.getIsSubsequentRegistrationAllowed())
-        .isAnonymousConversationAllowed(consultingType.getIsAnonymousConversationAllowed())
         .sessionDataInitializing(
             mapSessionDataInitializing(consultingType.getSessionDataInitializing()))
         .languageFormal(consultingType.getLanguageFormal())
@@ -37,7 +36,6 @@ public class FullConsultingTypeMapper extends ConsultingTypeMapper {
         .roles(mapRoles(consultingType.getRoles()))
         .notifications(mapNotifications(consultingType.getNotifications()))
         .requiredComponents(consultingType.getRequiredComponents())
-        .welcomeScreen(mapWelcomeScreen(consultingType.getWelcomeScreen()))
         .isVideoCallAllowed(consultingType.getIsVideoCallAllowed());
   }
 }
