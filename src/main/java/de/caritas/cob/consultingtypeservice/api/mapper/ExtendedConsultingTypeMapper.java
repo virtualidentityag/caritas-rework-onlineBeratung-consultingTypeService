@@ -21,8 +21,6 @@ public class ExtendedConsultingTypeMapper extends ConsultingTypeMapper {
         .slug(consultingType.getSlug())
         .urls(mapUrls(consultingType.getUrls()))
         .registration(mapRegistration(consultingType.getRegistration()))
-        .excludeNonMainConsultantsFromTeamSessions(
-            consultingType.getExcludeNonMainConsultantsFromTeamSessions())
         .whiteSpot(mapWhiteSpot(consultingType.getWhiteSpot()))
         .groupChat(mapGroupChat(consultingType.getGroupChat()))
         .consultantBoundedToConsultingType(consultingType.getConsultantBoundedToConsultingType())
@@ -33,7 +31,6 @@ public class ExtendedConsultingTypeMapper extends ConsultingTypeMapper {
             mapSessionDataInitializing(consultingType.getSessionDataInitializing()))
         .languageFormal(consultingType.getLanguageFormal())
         .roles(mapRoles(consultingType.getRoles()))
-        .notifications(mapNotifications(consultingType.getNotifications()))
         .showAskerProfile(consultingType.getShowAskerProfile())
         .isVideoCallAllowed(consultingType.getIsVideoCallAllowed());
   }

@@ -11,7 +11,6 @@
     "url": "https://www.domain.com"
   },
   "slug": "consultingtype2",
-  "excludeNonMainConsultantsFromTeamSessions": false,
   "consultantBoundedToConsultingType": false,
   "welcomeMessage": {
     "sendWelcomeMessage": true,
@@ -49,13 +48,6 @@
         "consultant",
         "u25-consultant"
       ]
-    }
-  },
-  "notifications": {
-    "teamSessions": {
-      "newMessage": {
-        "allTeamConsultants": false
-      }
     }
   },
   "registration": {

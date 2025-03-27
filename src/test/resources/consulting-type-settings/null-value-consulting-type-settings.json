@@ -2,7 +2,6 @@
   "id": 1000,
   "tenantId": null,
   "slug": "null-values",
-  "excludeNonMainConsultantsFromTeamSessions": false,
   "consultantBoundedToConsultingType": false,
   "welcomeMessage": {
     "sendWelcomeMessage": false,
@@ -31,13 +30,6 @@
   "roles": {
     "consultant": {
       "default": ["consultant"]
-    }
-  },
-  "notifications": {
-    "teamSessions": {
-      "newMessage": {
-        "allTeamConsultants": true
-      }
     }
   },
   "registration": {

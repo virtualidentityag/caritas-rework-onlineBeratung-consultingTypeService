@@ -9,7 +9,6 @@
     "url": "https://www.domain.com"
   },
   "slug": "consultingtype2",
-  "excludeNonMainConsultantsFromTeamSessions": false,
   "consultantBoundedToConsultingType": false,
   "sendSaveSessionDataMessage": true,
   "isVideoCallAllowed": false,

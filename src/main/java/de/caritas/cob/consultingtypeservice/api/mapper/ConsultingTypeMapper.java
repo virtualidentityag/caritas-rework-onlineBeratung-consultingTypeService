@@ -7,24 +7,18 @@ import de.caritas.cob.consultingtypeservice.api.model.BasicConsultingTypeRespons
 import de.caritas.cob.consultingtypeservice.api.model.BasicConsultingTypeResponseDTOGroupChat;
 import de.caritas.cob.consultingtypeservice.api.model.BasicConsultingTypeResponseDTORegistration;
 import de.caritas.cob.consultingtypeservice.api.model.BasicConsultingTypeResponseDTOUrls;
-import de.caritas.cob.consultingtypeservice.api.model.NotificationsDTO;
-import de.caritas.cob.consultingtypeservice.api.model.NotificationsDTOTeamSessions;
 import de.caritas.cob.consultingtypeservice.api.model.RegistrationDTOMandatoryFields;
 import de.caritas.cob.consultingtypeservice.api.model.RegistrationDTONotes;
 import de.caritas.cob.consultingtypeservice.api.model.RolesDTO;
 import de.caritas.cob.consultingtypeservice.api.model.SessionDataInitializingDTO;
-import de.caritas.cob.consultingtypeservice.api.model.TeamSessionsDTONewMessage;
 import de.caritas.cob.consultingtypeservice.api.model.WelcomeMessageDTO;
 import de.caritas.cob.consultingtypeservice.api.model.WhiteSpotDTO;
 import de.caritas.cob.consultingtypeservice.schemas.model.ConsultingType;
 import de.caritas.cob.consultingtypeservice.schemas.model.FurtherInformation;
 import de.caritas.cob.consultingtypeservice.schemas.model.GroupChat;
-import de.caritas.cob.consultingtypeservice.schemas.model.NewMessage;
-import de.caritas.cob.consultingtypeservice.schemas.model.Notifications;
 import de.caritas.cob.consultingtypeservice.schemas.model.Registration;
 import de.caritas.cob.consultingtypeservice.schemas.model.Roles;
 import de.caritas.cob.consultingtypeservice.schemas.model.SessionDataInitializing;
-import de.caritas.cob.consultingtypeservice.schemas.model.TeamSessions;
 import de.caritas.cob.consultingtypeservice.schemas.model.Urls;
 import de.caritas.cob.consultingtypeservice.schemas.model.WelcomeMessage;
 import de.caritas.cob.consultingtypeservice.schemas.model.WhiteSpot;
@@ -123,28 +117,6 @@ public class ConsultingTypeMapper {
     return new RolesDTO()
         .consultant(
             Consultant.builder().roleNames(new LinkedHashMap<>(roles.getConsultant())).build());
-  }
-
-  protected static NotificationsDTO mapNotifications(Notifications notifications) {
-    return nonNull(notifications)
-        ? new NotificationsDTO().teamSessions(mapTeamSessions(notifications.getTeamSessions()))
-        : createDefaultNotifications();
-  }
-
-  private static NotificationsDTO createDefaultNotifications() {
-    return new NotificationsDTO()
-        .teamSessions(
-            new NotificationsDTOTeamSessions()
-                .newMessage(new TeamSessionsDTONewMessage().allTeamConsultants(true)));
-  }
-
-  protected static NotificationsDTOTeamSessions mapTeamSessions(TeamSessions teamSessions) {
-    return new NotificationsDTOTeamSessions()
-        .newMessage(mapNewMessage(teamSessions.getNewMessage()));
-  }
-
-  protected static TeamSessionsDTONewMessage mapNewMessage(NewMessage newMessage) {
-    return new TeamSessionsDTONewMessage().allTeamConsultants(newMessage.getAllTeamConsultants());
   }
 
   public static <R> R mapConsultingType(

@@ -218,11 +218,6 @@
       "description": "The unique slug for the consulting type",
       "type": "string"
     },
-    "excludeNonMainConsultantsFromTeamSessions": {
-      "description": "True, if only consultants with role main-consultant should be added to all team sessions",
-      "type": "boolean",
-      "default": false
-    },
     "lockedAgencies": {
       "description": "If true, no agency with this consulting type can be deleted or set offline via the admin api",
       "type": "boolean",
@@ -362,37 +357,6 @@
           "javaType": "java.util.Map<String, java.util.List<String>>"
         }
       }
-    },
-    "notifications": {
-      "description": "Settings for the mail notifications",
-      "type": "object",
-      "properties": {
-        "teamSessions": {
-          "description": "Special mail notification settings for team sessions",
-          "type": "object",
-          "properties": {
-            "newMessage": {
-              "description": "Special mail notification settings for new messages",
-              "type": "object",
-              "properties": {
-                "allTeamConsultants": {
-                  "description": "If true, all consultants will be informed by email",
-                  "type": "boolean"
-                }
-              },
-              "required": [
-                "allTeamConsultants"
-              ]
-            }
-          },
-          "required": [
-            "newMessage"
-          ]
-        }
-      },
-      "required": [
-        "teamSessions"
-      ]
     },
     "registration": {
       "description": "Settings for the registration process",
