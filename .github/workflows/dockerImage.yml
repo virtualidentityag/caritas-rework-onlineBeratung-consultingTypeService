@@ -14,7 +14,7 @@ on:
 jobs:
   test:
     name: Build and run unit tests
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     env:
       FAIL_WEBHOOK_SECRET: ${{ secrets.MS_TEAMS_FAIL_WEBHOOK_URI }}
     steps:
@@ -68,7 +68,7 @@ jobs:
         registry: ["docker.pkg.github.com", "ghcr.io"]
     needs: [test]
     name: Push Docker image to GitHub Packages
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     env:
       IMAGE_WEBHOOK_SECRET: ${{ secrets.MS_TEAMS_IMAGE_WEBHOOK_URI }}
       FAIL_WEBHOOK_SECRET: ${{ secrets.MS_TEAMS_FAIL_WEBHOOK_URI }}
