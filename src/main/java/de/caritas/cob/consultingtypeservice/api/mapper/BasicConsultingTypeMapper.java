@@ -19,7 +19,6 @@ public class BasicConsultingTypeMapper extends ConsultingTypeMapper {
         .description(consultingType.getDescription())
         .furtherInformation(mapFurtherInformation(consultingType.getFurtherInformation()))
         .isSubsequentRegistrationAllowed(consultingType.getIsSubsequentRegistrationAllowed())
-        .isAnonymousConversationAllowed(consultingType.getIsAnonymousConversationAllowed())
         .urls(mapUrls(consultingType.getUrls()))
         .registration(mapRegistration(consultingType.getRegistration()))
         .groupChat(mapGroupChat(consultingType.getGroupChat()))

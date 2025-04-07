@@ -13,7 +13,6 @@
   "excludeNonMainConsultantsFromTeamSessions": false,
   "consultantBoundedToConsultingType": false,
   "isSubsequentRegistrationAllowed": true,
-  "isAnonymousConversationAllowed": false,
   "showAskerProfile": false,
   "isVideoCallAllowed": false,
   "welcomeMessage": {
@@ -113,12 +112,6 @@
     },
     "state": {
       "isEnabled": true
-    }
-  },
-  "welcomeScreen": {
-    "anonymous": {
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet, consetetur..."
     }
   }
 }
