@@ -10,7 +10,6 @@
     "url": "https://www.domain.com"
   },
   "slug": "consultingtype0",
-  "excludeNonMainConsultantsFromTeamSessions": false,
   "consultantBoundedToConsultingType": false,
   "isSubsequentRegistrationAllowed": true,
   "showAskerProfile": false,
@@ -50,13 +49,6 @@
         "consultant",
         "u25-consultant"
       ]
-    }
-  },
-  "notifications": {
-    "teamSessions": {
-      "newMessage": {
-        "allTeamConsultants": false
-      }
     }
   },
   "registration": {

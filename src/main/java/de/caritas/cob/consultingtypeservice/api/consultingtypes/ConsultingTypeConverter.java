@@ -5,7 +5,6 @@ import de.caritas.cob.consultingtypeservice.api.model.BasicConsultingTypeRespons
 import de.caritas.cob.consultingtypeservice.api.model.BasicConsultingTypeResponseDTORegistration;
 import de.caritas.cob.consultingtypeservice.api.model.BasicConsultingTypeResponseDTOUrls;
 import de.caritas.cob.consultingtypeservice.api.model.ConsultingTypeDTO;
-import de.caritas.cob.consultingtypeservice.api.model.ConsultingTypeDTONotifications;
 import de.caritas.cob.consultingtypeservice.api.model.ConsultingTypeDTOSessionDataInitializing;
 import de.caritas.cob.consultingtypeservice.api.model.ConsultingTypeDTOWelcomeMessage;
 import de.caritas.cob.consultingtypeservice.api.model.ConsultingTypeDTOWhiteSpot;
@@ -18,16 +17,13 @@ import de.caritas.cob.consultingtypeservice.schemas.model.ConsultingType;
 import de.caritas.cob.consultingtypeservice.schemas.model.FurtherInformation;
 import de.caritas.cob.consultingtypeservice.schemas.model.GroupChat;
 import de.caritas.cob.consultingtypeservice.schemas.model.MandatoryFields;
-import de.caritas.cob.consultingtypeservice.schemas.model.NewMessage;
 import de.caritas.cob.consultingtypeservice.schemas.model.Notes;
-import de.caritas.cob.consultingtypeservice.schemas.model.Notifications;
 import de.caritas.cob.consultingtypeservice.schemas.model.Option;
 import de.caritas.cob.consultingtypeservice.schemas.model.Registration;
 import de.caritas.cob.consultingtypeservice.schemas.model.RequiredComponents;
 import de.caritas.cob.consultingtypeservice.schemas.model.Roles;
 import de.caritas.cob.consultingtypeservice.schemas.model.SessionDataInitializing;
 import de.caritas.cob.consultingtypeservice.schemas.model.State;
-import de.caritas.cob.consultingtypeservice.schemas.model.TeamSessions;
 import de.caritas.cob.consultingtypeservice.schemas.model.Urls;
 import de.caritas.cob.consultingtypeservice.schemas.model.WelcomeMessage;
 import de.caritas.cob.consultingtypeservice.schemas.model.WhiteSpot;
@@ -65,8 +61,6 @@ public class ConsultingTypeConverter {
         .withGroups(consultingTypeDTO.getGroups())
         .withFurtherInformation(convert(consultingTypeDTO.getFurtherInformation()))
         .withSlug(consultingTypeDTO.getSlug())
-        .withExcludeNonMainConsultantsFromTeamSessions(
-            consultingTypeDTO.getExcludeNonMainConsultantsFromTeamSessions())
         .withWhiteSpot(convert(consultingTypeDTO.getWhiteSpot()))
         .withGroupChat(convert(consultingTypeDTO.getGroupChat()))
         .withConsultantBoundedToConsultingType(
@@ -76,7 +70,6 @@ public class ConsultingTypeConverter {
         .withSessionDataInitializing(convert(consultingTypeDTO.getSessionDataInitializing()))
         .withLanguageFormal(consultingTypeDTO.getLanguageFormal())
         .withRoles(convert(consultingTypeDTO.getRoles()))
-        .withNotifications(convert(consultingTypeDTO.getNotifications()))
         .withRegistration(convert(consultingTypeDTO.getRegistration()))
         .withUrls(convert(consultingTypeDTO.getUrls()))
         .withShowAskerProfile(consultingTypeDTO.getShowAskerProfile())
@@ -91,7 +84,6 @@ public class ConsultingTypeConverter {
         .withWelcomeMessage(convert(consultingTypeDTO.getWelcomeMessage()))
         .withSendFurtherStepsMessage(consultingTypeDTO.getSendFurtherStepsMessage())
         .withLanguageFormal(consultingTypeDTO.getLanguageFormal())
-        .withNotifications(convert(consultingTypeDTO.getNotifications()))
         .withIsVideoCallAllowed(consultingTypeDTO.getIsVideoCallAllowed());
   }
 
@@ -118,18 +110,6 @@ public class ConsultingTypeConverter {
             new MandatoryFields(
                 registration.getMandatoryFields().getAge(),
                 registration.getMandatoryFields().getState()));
-  }
-
-  private Notifications convert(ConsultingTypeDTONotifications notifications) {
-    if (notifications == null) {
-      return null;
-    }
-    return new Notifications()
-        .withTeamSessions(
-            new TeamSessions()
-                .withNewMessage(
-                    new NewMessage(
-                        notifications.getTeamSessions().getNewMessage().getAllTeamConsultants())));
   }
 
   private Roles convert(RolesDTO roles) {
