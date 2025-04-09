@@ -21,20 +21,16 @@ public class ExtendedConsultingTypeMapper extends ConsultingTypeMapper {
         .slug(consultingType.getSlug())
         .urls(mapUrls(consultingType.getUrls()))
         .registration(mapRegistration(consultingType.getRegistration()))
-        .excludeNonMainConsultantsFromTeamSessions(
-            consultingType.getExcludeNonMainConsultantsFromTeamSessions())
         .whiteSpot(mapWhiteSpot(consultingType.getWhiteSpot()))
         .groupChat(mapGroupChat(consultingType.getGroupChat()))
         .consultantBoundedToConsultingType(consultingType.getConsultantBoundedToConsultingType())
         .welcomeMessage(mapWelcomeMessage(consultingType.getWelcomeMessage()))
         .sendFurtherStepsMessage(consultingType.getSendFurtherStepsMessage())
         .isSubsequentRegistrationAllowed(consultingType.getIsSubsequentRegistrationAllowed())
-        .isAnonymousConversationAllowed(consultingType.getIsAnonymousConversationAllowed())
         .sessionDataInitializing(
             mapSessionDataInitializing(consultingType.getSessionDataInitializing()))
         .languageFormal(consultingType.getLanguageFormal())
         .roles(mapRoles(consultingType.getRoles()))
-        .notifications(mapNotifications(consultingType.getNotifications()))
         .showAskerProfile(consultingType.getShowAskerProfile())
         .isVideoCallAllowed(consultingType.getIsVideoCallAllowed());
   }
