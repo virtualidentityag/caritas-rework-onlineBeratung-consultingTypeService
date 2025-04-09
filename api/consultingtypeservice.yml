@@ -267,9 +267,6 @@ components:
         isSubsequentRegistrationAllowed:
           type: boolean
           example: true
-        isAnonymousConversationAllowed:
-          type: boolean
-          example: false
         showAskerProfile:
           type: boolean
           example: true
@@ -289,9 +286,6 @@ components:
             slug:
               type: string
               example: part-of-url
-            excludeNonMainConsultantsFromTeamSessions:
-              type: boolean
-              example: true
             whiteSpot:
               allOf:
                 - $ref: '#/components/schemas/WhiteSpotDTO'
@@ -309,9 +303,6 @@ components:
                 - $ref: '#/components/schemas/SessionDataInitializingDTO'
             roles:
               $ref: '#/components/schemas/RolesDTO'
-            notifications:
-              allOf:
-                - $ref: '#/components/schemas/NotificationsDTO'
 
     FullConsultingTypeResponseDTO:
       type: object
@@ -321,8 +312,6 @@ components:
           properties:
             requiredComponents:
               type: object
-            welcomeScreen:
-              $ref: '#/components/schemas/WelcomeScreenDTO'
 
     ConsultingTypeDTO:
       type: object
@@ -340,15 +329,9 @@ components:
         slug:
           type: string
           example: part-of-url
-        excludeNonMainConsultantsFromTeamSessions:
-          type: boolean
-          example: true
         isSubsequentRegistrationAllowed:
           type: boolean
           example: true
-        isAnonymousConversationAllowed:
-          type: boolean
-          example: false
         showAskerProfile:
           type: boolean
           example: true
@@ -387,14 +370,8 @@ components:
             - $ref: '#/components/schemas/SessionDataInitializingDTO'
         roles:
           $ref: '#/components/schemas/RolesDTO'
-        notifications:
-          allOf:
-            - $ref: '#/components/schemas/NotificationsDTO'
         requiredComponents:
           $ref: '#/components/schemas/RequiredComponentsDTO'
-        welcomeScreen:
-          $ref: '#/components/schemas/WelcomeScreenDTO'
-
 
     FurtherInformationDTO:
       type: object
@@ -518,43 +495,6 @@ components:
           items:
             type: string
 
-    NotificationsDTO:
-      type: object
-      properties:
-        teamSessions:
-          allOf:
-            - $ref: '#/components/schemas/TeamSessionsDTO'
-
-    TeamSessionsDTO:
-      type: object
-      properties:
-        newMessage:
-          allOf:
-            - $ref: '#/components/schemas/NewMessageDTO'
-
-    NewMessageDTO:
-      type: object
-      properties:
-        allTeamConsultants:
-          type: "boolean"
-          example: true
-
-    WelcomeScreenDTO:
-      type: object
-      properties:
-        anonymous:
-          $ref: '#/components/schemas/AnonymousScreenDTO'
-
-    AnonymousScreenDTO:
-      type: object
-      properties:
-        title:
-          type: string
-          example: Lorem ipsum
-        text:
-          type: string
-          example: Lorem ipsum dolor sit amet, consetetur...
-
     RequiredComponentsDTO:
       type: object
       properties:
@@ -628,6 +568,3 @@ components:
         welcomeMessage:
           allOf:
             - $ref: '#/components/schemas/WelcomeMessageDTO'
-        notifications:
-          allOf:
-            - $ref: '#/components/schemas/NotificationsDTO'

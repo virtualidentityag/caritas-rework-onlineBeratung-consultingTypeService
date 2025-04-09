@@ -6,7 +6,6 @@ import static org.hamcrest.Matchers.notNullValue;
 import static org.hamcrest.Matchers.nullValue;
 
 import de.caritas.cob.consultingtypeservice.api.model.BasicConsultingTypeResponseDTOGroupChat;
-import de.caritas.cob.consultingtypeservice.api.model.NotificationsDTO;
 import de.caritas.cob.consultingtypeservice.api.model.SessionDataInitializingDTO;
 import de.caritas.cob.consultingtypeservice.api.model.WelcomeMessageDTO;
 import de.caritas.cob.consultingtypeservice.api.model.WhiteSpotDTO;
@@ -39,16 +38,6 @@ public class ConsultingTypeMapperTest {
     assertThat(result, notNullValue());
     assertThat(result.getSendWelcomeMessage(), is(false));
     assertThat(result.getWelcomeMessageText(), nullValue());
-  }
-
-  @Test
-  public void mapNotifications_Should_InitializeDefaultObjectIfNull() {
-
-    NotificationsDTO result = ConsultingTypeMapper.mapNotifications(null);
-    assertThat(result, notNullValue());
-    assertThat(result.getTeamSessions(), notNullValue());
-    assertThat(result.getTeamSessions().getNewMessage(), notNullValue());
-    assertThat(result.getTeamSessions().getNewMessage().getAllTeamConsultants(), is(true));
   }
 
   @Test

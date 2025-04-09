@@ -21,23 +21,18 @@ public class FullConsultingTypeMapper extends ConsultingTypeMapper {
         .slug(consultingType.getSlug())
         .urls(mapUrls(consultingType.getUrls()))
         .registration(mapRegistration(consultingType.getRegistration()))
-        .excludeNonMainConsultantsFromTeamSessions(
-            consultingType.getExcludeNonMainConsultantsFromTeamSessions())
         .whiteSpot(mapWhiteSpot(consultingType.getWhiteSpot()))
         .groupChat(mapGroupChat(consultingType.getGroupChat()))
         .consultantBoundedToConsultingType(consultingType.getConsultantBoundedToConsultingType())
         .welcomeMessage(mapWelcomeMessage(consultingType.getWelcomeMessage()))
         .sendFurtherStepsMessage(consultingType.getSendFurtherStepsMessage())
         .isSubsequentRegistrationAllowed(consultingType.getIsSubsequentRegistrationAllowed())
-        .isAnonymousConversationAllowed(consultingType.getIsAnonymousConversationAllowed())
         .sessionDataInitializing(
             mapSessionDataInitializing(consultingType.getSessionDataInitializing()))
         .languageFormal(consultingType.getLanguageFormal())
         .showAskerProfile(consultingType.getShowAskerProfile())
         .roles(mapRoles(consultingType.getRoles()))
-        .notifications(mapNotifications(consultingType.getNotifications()))
         .requiredComponents(consultingType.getRequiredComponents())
-        .welcomeScreen(mapWelcomeScreen(consultingType.getWelcomeScreen()))
         .isVideoCallAllowed(consultingType.getIsVideoCallAllowed());
   }
 }
