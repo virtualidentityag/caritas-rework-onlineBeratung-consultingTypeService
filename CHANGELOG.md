@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.2](https://github.com/CaritasDeutschland/caritas-onlineBeratung-consultingTypeService/compare/v1.4.1...v1.4.2) (2025-04-10)
+
+
+### Bug Fixes
+
+* actions cache version ([4db2971](https://github.com/CaritasDeutschland/caritas-onlineBeratung-consultingTypeService/commit/4db2971b9d7c45bb09a4bfe9d0acf06bdc205a73))
+* bump MongoDB to version 6 ([86ca285](https://github.com/CaritasDeutschland/caritas-onlineBeratung-consultingTypeService/commit/86ca2854c4580cb9a3aa91cb4fb0ea78b3b06d60))
+* bump MongoDB to version 6 ([8541bc9](https://github.com/CaritasDeutschland/caritas-onlineBeratung-consultingTypeService/commit/8541bc9010335830ec10aba80708a0741b7180c8))
+* bump MongoDB to version 7 ([0a31159](https://github.com/CaritasDeutschland/caritas-onlineBeratung-consultingTypeService/commit/0a311590b7444cc4946ac22ac08e0cba5c61b3b5))
+* use ubuntu-20.04 version for action runner ([5e3f4c9](https://github.com/CaritasDeutschland/caritas-onlineBeratung-consultingTypeService/commit/5e3f4c934050b5bf6d090a7356ca0783e0628945))
+* use ubuntu-20.04 version for action runner ([4b9cc0f](https://github.com/CaritasDeutschland/caritas-onlineBeratung-consultingTypeService/commit/4b9cc0f558880e6f69446f17082635516d6e6159))
+
 ### [1.4.1](https://github.com/CaritasDeutschland/caritas-onlineBeratung-consultingTypeService/compare/v1.4.0...v1.4.1) (2024-12-20)
 
 
