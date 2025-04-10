@@ -6,7 +6,6 @@
   ],
   "description": "Lorem ipsum",
   "slug": "consultingtype12",
-  "excludeNonMainConsultantsFromTeamSessions": false,
   "consultantBoundedToConsultingType": false,
   "sendSaveSessionDataMessage": true,
   "isVideoCallAllowed": false,

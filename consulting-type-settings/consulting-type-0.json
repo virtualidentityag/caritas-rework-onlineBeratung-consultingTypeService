@@ -11,7 +11,6 @@
     "url": "https://www.domain.com"
   },
   "slug": "consultingtype0",
-  "excludeNonMainConsultantsFromTeamSessions": false,
   "consultantBoundedToConsultingType": false,
   "welcomeMessage": {
     "sendWelcomeMessage": true,
@@ -49,13 +48,6 @@
         "consultant",
         "u25-consultant"
       ]
-    }
-  },
-  "notifications": {
-    "teamSessions": {
-      "newMessage": {
-        "allTeamConsultants": false
-      }
     }
   },
   "registration": {
@@ -115,12 +107,6 @@
     },
     "state": {
       "isEnabled": true
-    }
-  },
-  "welcomeScreen": {
-    "anonymous": {
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet, consetetur..."
     }
   }
 }
